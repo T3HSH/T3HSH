@@ -1,5 +1,5 @@
 {
-  "name": "link-zone",
+  "name": "pelak",
   "version": "1.0.0",
   "private": true,
   "description": "Your own link-in-bio page on Cloudflare Workers",

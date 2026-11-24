@@ -1,14 +1,14 @@
 <div dir="rtl" align="center">
 
-<img src="public/logo.png" width="96" alt="Link Zone" />
+<img src="public/logo.png" width="96" alt="Pelak" />
 
-# Link Zone
+# Pelak | پلاک
 
 **صفحه‌ی لینک شخصی خودت؛ متحرک، رایگان، روی کلودفلر و فقط با یک فایل تنظیمات.**
 
-[English](README.md) · [نمونه‌ی زنده](https://pdnczone.ir) · [گزارش مشکل](https://github.com/pdnczone/link-zone/issues)
+[English](README.md) · [نمونه‌ی زنده](https://pdnczone.ir) · [گزارش مشکل](https://github.com/pdnczone/pelak/issues)
 
-[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/pdnczone/link-zone)
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/pdnczone/pelak)
 
 <img src="docs/preview-fa.png" alt="پیش‌نمایش" />
 
@@ -46,8 +46,8 @@
 </div>
 
 ```bash
-git clone https://github.com/pdnczone/link-zone.git
-cd link-zone
+git clone https://github.com/pdnczone/pelak.git
+cd pelak
 npm install
 # فایل site.config.js رو ویرایش کن و نتیجه رو روی http://localhost:8787 ببین
 npm run dev
@@ -120,7 +120,7 @@ sections: { snake: false, map: false }
 </div>
 
 ```bash
-git remote add upstream https://github.com/pdnczone/link-zone.git
+git remote add upstream https://github.com/pdnczone/pelak.git
 git fetch upstream
 git merge upstream/main --allow-unrelated-histories
 ```

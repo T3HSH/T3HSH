@@ -1,4 +1,4 @@
-# Link Zone — notes for AI coding tools
+# Pelak — notes for AI coding tools
 
 A link page on one Cloudflare Worker with static assets. No framework, no build step.
 

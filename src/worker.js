@@ -1,4 +1,4 @@
-// Link Zone — Copyright (c) 2026 PDNC. PolyForm Strict 1.0.0, see LICENSE.md and LICENSE-PERMISSIONS.md
+// Pelak — Copyright (c) 2026 PDNC. PolyForm Strict 1.0.0, see LICENSE.md and LICENSE-PERMISSIONS.md
 // One Cloudflare Worker. Settings live in ../site.config.js
 import SITE from "../site.config.js";
 import HTML from "./home.html";
@@ -1165,7 +1165,7 @@ async function tgApi(token, method, body) {
   }
 }
 async function tgWebhookSecret(token) {
-  const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(token + ":link-zone-webhook"));
+  const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(token + ":pelak-webhook"));
   return [...new Uint8Array(buf)].map((b) => b.toString(16).padStart(2, "0")).join("");
 }
 var tgN = (n) => Number(n || 0).toLocaleString("en-US");
@@ -2224,7 +2224,7 @@ async function handlePendingText(env, ctx, msg) {
 // ===== daily backup / restore =====
 // ---------- daily backup & restore ----------
 async function buildBackup(env) {
-  const out = { app: "link-zone", version: 1, at: new Date().toISOString(), keys: {} };
+  const out = { app: "pelak", version: 1, at: new Date().toISOString(), keys: {} };
   let cursor;
   do {
     const l = await env.STATS_KV.list(cursor ? { cursor } : {});
@@ -2245,7 +2245,7 @@ async function sendBackup(env) {
   const fd = new FormData();
   fd.append("chat_id", chat);
   fd.append("caption", "💾 بکاپ روزانه " + SITE.name + "\n" + Object.keys(b.keys).length + " کلید · " + Math.round(body.length / 1024) + " KB\nبرای بازگردانی: تنظیمات ← بازگردانی بکاپ");
-  fd.append("document", new Blob([body], { type: "application/json" }), "link-zone-backup-" + b.at.slice(0, 10) + ".json");
+  fd.append("document", new Blob([body], { type: "application/json" }), "pelak-backup-" + b.at.slice(0, 10) + ".json");
   try {
     const r = await fetch("https://api.telegram.org/bot" + token + "/sendDocument", { method: "POST", body: fd, signal: AbortSignal.timeout(2e4) });
     return await r.json();
@@ -2278,7 +2278,7 @@ async function restoreFromDocument(env, doc) {
   } catch (e) {
     return { err: "این فایل JSON معتبر نیست." };
   }
-  if (!b || b.app !== "link-zone" || !b.keys) return { err: "این فایل بکاپ این سایت نیست." };
+  if (!b || b.app !== "pelak" || !b.keys) return { err: "این فایل بکاپ این سایت نیست." };
   await env.STATS_KV.put("tg:restore", JSON.stringify(b), { expirationTtl: 3600 });
   return { b };
 }
@@ -3299,7 +3299,7 @@ async function fetchGitHub(env) {
   }
 }
 async function fetchGitHubApi(env) {
-  const headers = { "User-Agent": "link-zone/1.0", "Accept": "application/vnd.github+json" };
+  const headers = { "User-Agent": "pelak/1.0", "Accept": "application/vnd.github+json" };
   const ghToken = getEnv(env, "GITHUB_TOKEN");
   if (ghToken) headers["Authorization"] = "Bearer " + ghToken;
   let total = 0;

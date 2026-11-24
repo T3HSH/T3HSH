@@ -8,8 +8,8 @@
 // ─────────────────────────────────────────────────────────────────────────────
 export default {
   // ── Who you are ──
-  name: "LINK ZONE", //           big title, browser tab, share preview
-  shortName: "LINKS", //          name under the icon when installed on a phone
+  name: "PELAK", //           big title, browser tab, share preview
+  shortName: "Pelak", //          name under the icon when installed on a phone
   tagline: {
     fa: "اینجا همه‌ی لینک‌ها، ویدیوها و پروژه‌های من یک‌جا جمع شده",
     en: "All my links, videos and projects in one place"
@@ -20,7 +20,7 @@ export default {
   },
   signature: "built with love and caffeine", // small line at the bottom of the side bar
   cardSubtitle: "LINKS · VIDEOS · CODE", //     line on the visitor card image
-  showCredit: true, //            small "made with Link Zone" link; false removes it
+  showCredit: true, //            small "made with Pelak" link; false removes it
 
   // ── Languages ──
   languages: ["fa", "en"], //     ["fa"] or ["en"] for a single language (hides the switch)
@@ -81,7 +81,7 @@ export default {
   },
   hubCountry: "DE", //     lines on the globe fly to this country (two-letter code)
   hubLabel: "HQ",
-  terminalUser: "guest", // shown as guest@zone in the terminal
+  terminalUser: "guest", // shown as guest@pelak in the terminal
 
   // ── Optional ──
   securityContact: "" //   "mailto:you@example.com" or "https://t.me/you", used in /.well-known/security.txt

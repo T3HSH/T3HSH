@@ -1,14 +1,14 @@
 <div align="center">
 
-<img src="public/logo.png" width="96" alt="Link Zone" />
+<img src="public/logo.png" width="96" alt="Pelak" />
 
-# Link Zone
+# Pelak
 
 **Your own animated link page. Free, on Cloudflare, with one config file.**
 
-[فارسی](README.fa.md) · [Live example](https://pdnczone.ir) · [Report a bug](https://github.com/pdnczone/link-zone/issues)
+[فارسی](README.fa.md) · [Live example](https://pdnczone.ir) · [Report a bug](https://github.com/pdnczone/pelak/issues)
 
-[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/pdnczone/link-zone)
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/pdnczone/pelak)
 
 <img src="docs/preview-en.png" alt="Screenshot" />
 
@@ -42,8 +42,8 @@ You need a free [Cloudflare](https://dash.cloudflare.com/sign-up) account and a 
 You need [Node.js](https://nodejs.org) 22 or newer.
 
 ```bash
-git clone https://github.com/pdnczone/link-zone.git
-cd link-zone
+git clone https://github.com/pdnczone/pelak.git
+cd pelak
 npm install
 # edit site.config.js, then look at it on http://localhost:8787
 npm run dev
@@ -106,7 +106,7 @@ To start the bot, set the two Telegram secrets and `STATS_PASSWORD`, then open `
 Deployed with one click: in your copy, add this repository as a second remote and merge.
 
 ```bash
-git remote add upstream https://github.com/pdnczone/link-zone.git
+git remote add upstream https://github.com/pdnczone/pelak.git
 git fetch upstream
 git merge upstream/main --allow-unrelated-histories
 ```

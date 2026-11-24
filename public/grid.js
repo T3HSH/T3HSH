@@ -1,4 +1,4 @@
-// Link Zone — Copyright (c) 2026 PDNC. See LICENSE.md and LICENSE-PERMISSIONS.md
+// Pelak — Copyright (c) 2026 PDNC. See LICENSE.md and LICENSE-PERMISSIONS.md
 (function(){
   var canvas = document.getElementById('kinetic-grid');
   var ctx = canvas.getContext('2d');

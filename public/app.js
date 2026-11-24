@@ -1,4 +1,4 @@
-// Link Zone — Copyright (c) 2026 PDNC. See LICENSE.md and LICENSE-PERMISSIONS.md
+// Pelak — Copyright (c) 2026 PDNC. See LICENSE.md and LICENSE-PERMISSIONS.md
 (function(){
   // Settings come from site.config.js (the server puts them in window.SITE)
   var SITE = window.SITE;
@@ -604,7 +604,7 @@
   var OPEN_TARGETS = SITE.links.map(function(l){ return l.id; }).concat(off('project') ? [] : ['project']);
   var TERM_ALIAS = { tg: 'telegram', yt: 'youtube', ig: 'instagram', gh: 'github' };
   var TERM_HELP = [
-    ['help', 'show this list'], ['whoami', 'who is behind this zone'], ['links', 'all my links'],
+    ['help', 'show this list'], ['whoami', 'who is behind this page'], ['links', 'all my links'],
     ['stats', 'live numbers: members, subscribers, stars'], ['latest', 'latest YouTube videos'],
     ['posts', 'latest Telegram posts'], ['project', 'featured project'],
     ['open <name>', 'open a link: ' + OPEN_TARGETS.join(', ')],
@@ -718,7 +718,7 @@
         ['GitHub', statsData ? num(statsData.github) + ' stars' : '…'],
         ['Language', lang], ['Uptime', secs + 's (this session)']
       ];
-      termLine(SITE.user + '@zone', 'hl');
+      termLine(SITE.user + '@pelak', 'hl');
       termLine('---------', 'dim');
       for (var i = 0; i < rows.length; i++) termLine([{ t: pad(rows[i][0], 10), c: 'ok' }, rows[i][1]]);
     },
@@ -1149,7 +1149,7 @@
     var steps = [
       function(){ return '<span class="hl">' + esc(SITE.name) + '</span> bootloader v1.0'; },
       function(){ return OK + 'loaded kernel modules'; },
-      function(){ return OK + 'mounted /dev/zone'; },
+      function(){ return OK + 'mounted /dev/pelak'; },
       function(){ return OK + 'started network: tunnel0 up' + (ME && safeTag(ME.colo) ? ' via ' + safeTag(ME.colo) : ''); },
       function(){ return OK + 'resolving ' + esc(location.host) + (ME && safeTag(ME.country) ? ' for ' + safeTag(ME.country) : '') + ' ...'; },
       function(){ return OK + 'reached target: <span class="hl">welcome</span>'; }
