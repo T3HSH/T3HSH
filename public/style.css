@@ -98,7 +98,7 @@ main{
 h1{
   font-family: 'Rajdhani', 'Vazirmatn', sans-serif;
   font-size: 2.05rem; font-weight: 700; margin: 0 0 .8rem;
-  letter-spacing: .06em;
+  letter-spacing: .06em; padding-left: .06em; /* evens out the space after the last letter, so the name sits exactly under the logo */
   background: linear-gradient(95deg, var(--accent-1), var(--accent-2));
   -webkit-background-clip: text; background-clip: text; color: transparent;
   animation: title-in 1.1s var(--ease) .18s backwards;
@@ -120,7 +120,7 @@ h1{
 }
 .cursor{
   display:inline-block; width:.5em; height:1em; background: var(--accent-2);
-  margin-inline-start:.15em; vertical-align:-.15em; border-radius:1px;
+  margin-inline:.4em -.9em; vertical-align:-.15em; /* takes no width, so the text stays centred */ border-radius:1px;
   animation: blink 1.1s step-end infinite, cursor-in .3s ease var(--cd, .8s) backwards;
 }
 @keyframes blink{ 50%{ opacity:0; } }
@@ -530,11 +530,11 @@ h1{
     display:flex; flex-direction:column; align-items:flex-start;
     position: static; padding-top: .4rem;
   }
-  .profile{ align-items:flex-start; text-align:start; margin-bottom: 1.8rem; }
+  .profile{ width:100%; max-width:340px; margin-bottom: 1.8rem; }
   .mark-wrap{ width:112px; height:112px; margin-bottom:1.4rem; }
   h1{ font-size: 2.7rem; margin-bottom: 1rem; }
   .tagline{ font-size: 1.02rem; line-height: 1.95; max-width: 340px; }
-  .side footer{ text-align:start; margin-top: 0; }
+  .side footer{ text-align:center; margin-top: 0; }
   .actions{ justify-content:flex-start; }
 
   .grid{ grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.15rem; }
@@ -1043,7 +1043,7 @@ html.booting main, html.booting main *, html.booting main *::before, html.bootin
 .greet[hidden]{ display:none; }
 
 /* ── Hero polish: one column width, Terminal is the main action, greeting is a slim status line ── */
-.tagline{ text-wrap: pretty; }
+.tagline{ text-wrap: balance; }
 .greet{
   align-self: stretch; width: 100%; max-width: 340px; margin-top: 1.1rem;
   padding: .5rem .85rem; border-radius: 12px; text-align: start;
@@ -1078,7 +1078,6 @@ html.booting main, html.booting main *, html.booting main *::before, html.bootin
 footer .sig{ display: block; width: 100%; max-width: 340px; margin-inline: auto; text-align: center; box-sizing: border-box; }
 @media (min-width: 1000px){
   .actions, footer .sig{ margin-inline: 0; }
-  .mark-wrap{ align-self: center; }
 }
 
 .tile .icon-wrap{ translate: calc(var(--dx, 0) * 7px) calc(var(--dy, 0) * 7px); }

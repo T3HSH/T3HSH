@@ -61,8 +61,10 @@ npx wrangler secret put STATS_PASSWORD
 | Logo and favicon | replace [`public/logo.png`](public) (square PNG, 512×512) |
 | Image shown when the link is shared | replace [`public/og.png`](public) (1200×630) |
 | Linux tips (or turn them into any other tips) | [`public/tips.js`](public/tips.js) |
-
-The rest of the code may be changed only to send a pull request, or with permission ([license](LICENSE-PERMISSIONS.md)).
+| Design | [`public/style.css`](public/style.css), variables are at the top |
+| Page structure | [`src/home.html`](src/home.html) |
+| Behaviour in the browser | [`public/app.js`](public/app.js) |
+| Server side, API, bot | [`src/worker.js`](src/worker.js) |
 
 Add a link:
 
@@ -78,7 +80,7 @@ Hide a part:
 sections: { snake: false, map: false }
 ```
 
-Not a programmer? Give the repository to an AI coding tool (Claude Code, Cursor, ...) and tell it what your page should say. [`AGENTS.md`](AGENTS.md) explains the project to it.
+Not a programmer? Give the repository to an AI coding tool (Claude Code, Cursor, ...) and say what you want. [`AGENTS.md`](AGENTS.md) explains the project to it.
 
 ### Your own domain
 
@@ -126,9 +128,8 @@ Ideas, fixes and translations are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md
 
 ## License
 
-Free to use, source-available, **not for sale**: [PolyForm Strict 1.0.0](LICENSE.md) with [additional permissions](LICENSE-PERMISSIONS.md).
+Free to use and change, **not for sale**: [PolyForm Noncommercial 1.0.0](LICENSE.md) with [additional permissions](LICENSE-PERMISSIONS.md).
 
-- ✅ Run it for yourself, your channel or your own business, and change the settings, images and tips
-- ✅ Change the code to send a pull request
-- ⛔ Selling it, or selling its setup or hosting
-- ⛔ Other code changes, or publishing it elsewhere, without written permission from PDNC
+- ✅ Run it for yourself, your channel or your own business
+- ✅ Change anything, and share your version for free with the license files kept
+- ⛔ Selling it, or charging for its setup, hosting or customisation. Only PDNC may sell it

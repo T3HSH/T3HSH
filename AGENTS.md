@@ -2,7 +2,7 @@
 
 A link page on one Cloudflare Worker with static assets. No framework, no build step.
 
-**License:** PolyForm Strict with `LICENSE-PERMISSIONS.md`. For someone's own page edit only `site.config.js`, `wrangler.jsonc`, `public/logo.png`, `public/og.png` and `public/tips.js`. Change other files only for a pull request to this repository or with permission from PDNC. Keep the license files.
+**License:** PolyForm Noncommercial with `LICENSE-PERMISSIONS.md`: changes are fine, selling is not. Keep the license files and copyright lines.
 
 | Path | What |
 |---|---|

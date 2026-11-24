@@ -1,4 +1,4 @@
-// Pelak — Copyright (c) 2026 PDNC. PolyForm Strict 1.0.0, see LICENSE.md and LICENSE-PERMISSIONS.md
+// Pelak — Copyright (c) 2026 PDNC. PolyForm Noncommercial 1.0.0, see LICENSE.md and LICENSE-PERMISSIONS.md
 // One Cloudflare Worker. Settings live in ../site.config.js
 import SITE from "../site.config.js";
 import HTML from "./home.html";

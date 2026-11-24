@@ -130,7 +130,7 @@
     var words = I18N[lang].tagline.split(' ');
     var html = '';
     for (var i = 0; i < words.length; i++){
-      html += '<span class="w" style="--i:' + i + '">' + words[i] + '</span> ';
+      html += '<span class="w" style="--i:' + i + '">' + words[i] + '</span>' + (i < words.length - 1 ? ' ' : '');
     }
     var cursorDelay = (0.5 + words.length * 0.055 + 0.45).toFixed(2);
     el.innerHTML = html + '<span class="cursor" style="--cd:' + cursorDelay + 's"></span>';
