@@ -1,25 +1,28 @@
 
 export default {
-  // Brand
+  // BRAND
   name: "NODEX",
   shortName: "NODEX",
+
   tagline: {
-    fa: "زیرساخت پایدار، ارتباط هوشمند",
-    en: "Stable Infrastructure. Smart Connectivity."
+    fa: "زیرساخت قدرتمند، ارتباط پایدار",
+    en: "Powerful Infrastructure, Stable Connectivity"
   },
+
   description: {
-    fa: "ارائه خدمات سرور، پنل و راهکارهای شبکه",
-    en: "Servers, Panels and Network Solutions"
+    fa: "مرکز ارائه خدمات سرور، پنل و راهکارهای شبکه",
+    en: "Server, Panel and Network Solutions"
   },
+
   signature: "NODEX NETWORK",
   cardSubtitle: "SERVERS · TUNNELS · NETWORK",
   showCredit: false,
 
-  // Languages
+  // LANGUAGE
   languages: ["fa", "en"],
   defaultLang: "fa",
 
-  // Social
+  // SOCIAL
   social: {
     telegram: "",
     youtube: "",
@@ -28,10 +31,10 @@ export default {
     featuredRepo: ""
   },
 
-  // Links
+  // LINKS
   links: [],
 
-  // Donation
+  // DONATION
   donate: {
     enabled: false,
     title: { fa: "", en: "" },
@@ -48,7 +51,7 @@ export default {
     }
   },
 
-  // Sections
+  // PAGE SECTIONS
   sections: {
     videos: false,
     posts: false,
@@ -57,23 +60,24 @@ export default {
     guestbook: false,
     map: false,
     snake: false,
-    terminal: false,
+    terminal: true,
     achievements: false,
     visitorCard: false,
     qr: false
   },
 
-  // Hacker theme
+  // HACKER THEME
   theme: {
     accent: {
-      a1: [34, 211, 238],
-      a2: [34, 197, 94]
+      a1: [0, 255, 140],
+      a2: [0, 190, 255]
     }
   },
 
   hubCountry: "DE",
   hubLabel: "NODEX",
-  terminalUser: "admin",
+  terminalUser: "nodex",
 
+  // SECURITY
   securityContact: ""
 };
