@@ -8,18 +8,18 @@
 // ─────────────────────────────────────────────────────────────────────────────
 export default {
   // ── Who you are ──
-  name: "PELAK", //           big title, browser tab, share preview
-  shortName: "Pelak", //          name under the icon when installed on a phone
+  name: "T3HSH", //           big title, browser tab, share preview
+  shortName: "T3HSH", //          name under the icon when installed on a phone
   tagline: {
-    fa: "اینجا همه‌ی لینک‌ها، ویدیوها و پروژه‌های من یک‌جا جمع شده",
-    en: "All my links, videos and projects in one place"
+    fa: "اینجا همه‌ی لینک‌ها و پروژه‌های من یک‌جا جمع شده",
+    en: "All my links and projects in one place"
   },
   description: {
-    fa: "لینک‌ها، ویدیوها و پروژه‌های من",
-    en: "My links, videos and projects"
+    fa: "لینک‌ها و پروژه‌های من",
+    en: "My links and projects"
   },
   signature: "built with love and caffeine", // small line at the bottom of the side bar
-  cardSubtitle: "LINKS · VIDEOS · CODE", //     line on the visitor card image
+  cardSubtitle: "LINKS · CODE", //     line on the visitor card image
   showCredit: true, //            small "made with Pelak" link; false removes it
 
   // ── Languages ──
@@ -31,8 +31,8 @@ export default {
   // Members / subscribers / stars are fetched automatically.
   social: {
     telegram: "telegram", //      public channel username
-    youtube: "YouTube", //        channel handle
-    instagram: "instagram",
+    youtube: "", //               removed: no YouTube
+    instagram: "", //             removed: no Instagram
     github: "github",
     featuredRepo: "docs" //       one of your GitHub repositories to show as a card, "" to hide it
   },
@@ -60,7 +60,7 @@ export default {
 
   // ── Turn parts of the page on / off ──
   sections: {
-    videos: true, //        latest YouTube videos
+    videos: false, //       latest YouTube videos (off)
     posts: true, //         latest Telegram channel posts
     project: true, //       featured GitHub project
     tip: true, //           Linux tip of the day (edit the tips in public/tips.js)
