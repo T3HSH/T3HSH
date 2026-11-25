@@ -48,7 +48,7 @@ export default {
 
   // ── Donation card ──
   donate: {
-    enabled: true,
+    enabled: false,
     title: { fa: "حمایت از من", en: "Support me" },
     goalName: { fa: "تجهیزات جدید", en: "New gear" }, // Reymit's own goal name wins when connected
     goal: 10000000, //            goal amount
