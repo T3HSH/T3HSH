@@ -1,24 +1,24 @@
-// NODEX identity configuration based on Pelak.
-// Keep all Pelak features available; add real account names and URLs before publishing.
+// NODEX brand configuration for Pelak.
+// Replace the example Telegram destinations before publishing.
+// Keep secrets in Cloudflare Worker secrets, never in this public file.
 export default {
   name: "NODEX",
   shortName: "NODEX",
   tagline: {
-    fa: "زیرساخت قدرتمند، ارتباط هوشمند",
+    fa: "زیرساخت قدرتمند، ارتباط پایدار",
     en: "Powerful Infrastructure. Smart Connectivity."
   },
   description: {
-    fa: "مرکز خدمات سرور، پنل و راهکارهای شبکه NODEX",
-    en: "NODEX server, panel and network services"
+    fa: "ارائه خدمات سرور، پنل مدیریت و راهکارهای شبکه",
+    en: "Server infrastructure, management panels and network solutions"
   },
   signature: "NODEX NETWORK",
-  cardSubtitle: "SERVERS · TUNNELS · NETWORK",
-  showCredit: true,
+  cardSubtitle: "SERVERS · TUNNELS · PANELS",
+  showCredit: false,
 
   languages: ["fa", "en"],
   defaultLang: "fa",
 
-  // Add your real public usernames here. Empty values hide unconfigured social tiles.
   social: {
     telegram: "",
     youtube: "",
@@ -27,36 +27,106 @@ export default {
     featuredRepo: ""
   },
 
-  links: [],
+  // Pelak renders these as compact interactive links in its main grid.
+  // Replace https://t.me/YOUR_USERNAME with your real order/support destination.
+  links: [
+    {
+      id: "iran-server",
+      label: { fa: "سرور ایران", en: "Iran Servers" },
+      url: "https://t.me/YOUR_USERNAME",
+      icon: "globe",
+      color: "34,211,238",
+      handle: ""
+    },
+    {
+      id: "foreign-server",
+      label: { fa: "سرور خارج", en: "Abroad Servers" },
+      url: "https://t.me/YOUR_USERNAME",
+      icon: "globe",
+      color: "0,190,255",
+      handle: ""
+    },
+    {
+      id: "spoof-server",
+      label: { fa: "سرور ایران اسپوف", en: "Iran Spoof Servers" },
+      url: "https://t.me/YOUR_USERNAME",
+      icon: "code",
+      color: "0,255,140",
+      handle: ""
+    },
+    {
+      id: "tunnel-disruption",
+      label: { fa: "تانل شرایط اختلال", en: "Tunnel for Disrupted Networks" },
+      url: "https://t.me/YOUR_USERNAME",
+      icon: "code",
+      color: "0,255,140",
+      handle: ""
+    },
+    {
+      id: "tunnel-outage",
+      label: { fa: "راهکار ارتباطی زمان قطعی", en: "Connectivity Options During Outages" },
+      url: "https://t.me/YOUR_USERNAME",
+      icon: "globe",
+      color: "34,211,238",
+      handle: ""
+    },
+    {
+      id: "tunnel-gaming",
+      label: { fa: "تانل گیمینگ", en: "Gaming Tunnel" },
+      url: "https://t.me/YOUR_USERNAME",
+      icon: "star",
+      color: "139,92,246",
+      handle: ""
+    },
+    {
+      id: "panels",
+      label: { fa: "فروش پنل مدیریت کانفیگ", en: "Configuration Management Panels" },
+      url: "https://t.me/YOUR_USERNAME",
+      icon: "store",
+      color: "139,92,246",
+      handle: ""
+    },
+    {
+      id: "support",
+      label: { fa: "پشتیبانی و ثبت سفارش", en: "Support & Orders" },
+      url: "https://t.me/YOUR_USERNAME",
+      icon: "chat",
+      color: "74,222,128",
+      handle: ""
+    }
+  ],
 
   donate: {
-    enabled: true,
-    title: { fa: "حمایت از NODEX", en: "Support NODEX" },
-    goalName: { fa: "توسعه زیرساخت", en: "Infrastructure development" },
+    enabled: false,
+    title: { fa: "", en: "" },
+    goalName: { fa: "", en: "" },
     goal: 0,
     currency: { fa: "تومان", en: "Toman" },
-    button: { label: { fa: "حمایت", en: "Support" }, url: "" },
-    crypto: { label: { fa: "حمایت کریپتو", en: "Crypto support" }, url: "" }
+    button: { label: { fa: "", en: "" }, url: "" },
+    crypto: { label: { fa: "", en: "" }, url: "" }
   },
 
-  // Preserve every original Pelak feature.
   sections: {
-    videos: true,
-    posts: true,
-    project: true,
-    tip: true,
-    guestbook: true,
-    map: true,
-    snake: true,
+    videos: false,
+    posts: false,
+    project: false,
+    tip: false,
+    guestbook: false,
+    map: false,
+    snake: false,
     terminal: true,
-    achievements: true,
-    visitorCard: true,
+    achievements: false,
+    visitorCard: false,
     qr: true
   },
 
   theme: {
-    accent: { a1: [0, 255, 140], a2: [0, 190, 255] }
+    accent: {
+      a1: [0, 255, 140],
+      a2: [0, 190, 255]
+    }
   },
+
   hubCountry: "DE",
   hubLabel: "NODEX",
   terminalUser: "nodex",
