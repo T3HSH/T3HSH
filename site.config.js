@@ -1,88 +1,79 @@
-// ─────────────────────────────────────────────────────────────────────────────
-//  This is the only file you need to edit.  تنها فایلی که لازمه تغییر بدی همینه.
-//
-//  - Text with { fa, en } is shown in the matching language.
-//  - Leave a value as "" (empty) to hide that part of the page.
-//  - Never put passwords, tokens or API keys here: this file is public.
-//    Those go in Cloudflare as secrets (see README).
-// ─────────────────────────────────────────────────────────────────────────────
+
 export default {
-  // ── Who you are ──
-  name: "T3HSH", //           big title, browser tab, share preview
-  shortName: "T3HSH", //          name under the icon when installed on a phone
+  // Brand
+  name: "NODEX",
+  shortName: "NODEX",
   tagline: {
-    fa: "اینجا همه‌ی لینک‌ها و پروژه‌های من یک‌جا جمع شده",
-    en: "All my links and projects in one place"
+    fa: "زیرساخت پایدار، ارتباط هوشمند",
+    en: "Stable Infrastructure. Smart Connectivity."
   },
   description: {
-    fa: "لینک‌ها و پروژه‌های من",
-    en: "My links and projects"
+    fa: "ارائه خدمات سرور، پنل و راهکارهای شبکه",
+    en: "Servers, Panels and Network Solutions"
   },
-  signature: "built with love and caffeine", // small line at the bottom of the side bar
-  cardSubtitle: "LINKS · CODE", //     line on the visitor card image
-  showCredit: true, //            small "made with Pelak" link; false removes it
+  signature: "NODEX NETWORK",
+  cardSubtitle: "SERVERS · TUNNELS · NETWORK",
+  showCredit: false,
 
-  // ── Languages ──
-  languages: ["fa", "en"], //     ["fa"] or ["en"] for a single language (hides the switch)
+  // Languages
+  languages: ["fa", "en"],
   defaultLang: "fa",
 
-  // ── Social accounts: username only, without @ or https:// ──
-  // The four big tiles. "telegram", "YouTube"... are only samples: put your own, or "" to hide one.
-  // Members / subscribers / stars are fetched automatically.
+  // Social
   social: {
-    telegram: "telegram", //      public channel username
-    youtube: "", //               removed: no YouTube
-    instagram: "", //             removed: no Instagram
-    github: "github",
-    featuredRepo: "docs" //       one of your GitHub repositories to show as a card, "" to hide it
+    telegram: "",
+    youtube: "",
+    instagram: "",
+    github: "",
+    featuredRepo: ""
   },
 
-  // ── Any other link you want ──
-  // id    : used in the address, so id "website" also works as your-site.com/website
-  // icon  : code | globe | mail | chat | x | discord | linkedin | store | star
-  // color : red,green,blue
-  // handle: optional text with a copy button
-  links: [
-    { id: "website", label: { fa: "وب‌سایت", en: "Website" }, url: "https://example.com", icon: "globe", color: "139,92,246", handle: "" },
-    { id: "email", label: { fa: "ایمیل", en: "Email" }, url: "mailto:hello@example.com", icon: "mail", color: "74,222,128", handle: "hello@example.com" }
-  ],
+  // Links
+  links: [],
 
-  // ── Donation card ──
+  // Donation
   donate: {
     enabled: false,
-    title: { fa: "حمایت از من", en: "Support me" },
-    goalName: { fa: "تجهیزات جدید", en: "New gear" }, // Reymit's own goal name wins when connected
-    goal: 10000000, //            goal amount
+    title: { fa: "", en: "" },
+    goalName: { fa: "", en: "" },
+    goal: 0,
     currency: { fa: "تومان", en: "Toman" },
-    button: { label: { fa: "حمایت", en: "Donate" }, url: "https://example.com/donate" }, // url "" hides the button
-    crypto: { label: { fa: "کریپتو ⚡", en: "Crypto ⚡" }, url: "" }
+    button: {
+      label: { fa: "", en: "" },
+      url: ""
+    },
+    crypto: {
+      label: { fa: "", en: "" },
+      url: ""
+    }
   },
 
-  // ── Turn parts of the page on / off ──
+  // Sections
   sections: {
-    videos: false, //       latest YouTube videos (off)
-    posts: true, //         latest Telegram channel posts
-    project: true, //       featured GitHub project
-    tip: true, //           Linux tip of the day (edit the tips in public/tips.js)
-    guestbook: true,
-    map: true, //           visitors globe
-    snake: true, //         snake game with a shared leaderboard
-    terminal: true,
-    achievements: true,
-    visitorCard: true,
-    qr: true
+    videos: false,
+    posts: false,
+    project: false,
+    tip: false,
+    guestbook: false,
+    map: false,
+    snake: false,
+    terminal: false,
+    achievements: false,
+    visitorCard: false,
+    qr: false
   },
 
-  // ── Look ──
+  // Hacker theme
   theme: {
-    // null = colours follow the visitor's time of day.
-    // For fixed colours: { a1: [47, 139, 255], a2: [139, 92, 246] }  (red, green, blue)
-    accent: null
+    accent: {
+      a1: [34, 211, 238],
+      a2: [34, 197, 94]
+    }
   },
-  hubCountry: "DE", //     lines on the globe fly to this country (two-letter code)
-  hubLabel: "HQ",
-  terminalUser: "guest", // shown as guest@pelak in the terminal
 
-  // ── Optional ──
-  securityContact: "" //   "mailto:you@example.com" or "https://t.me/you", used in /.well-known/security.txt
+  hubCountry: "DE",
+  hubLabel: "NODEX",
+  terminalUser: "admin",
+
+  securityContact: ""
 };
